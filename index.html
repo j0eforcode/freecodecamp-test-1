@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <style>
+      #img-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .column {
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+      
+      }
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+      }
+      @media screen and (max-width: 800px) {
+        .column {
+          flex: 50%;
+          max-width: 50%;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .column {
+          flex: 100%;
+          max-width: 100%;
+        }
+      }  
+
+    </style>
+
+   </head>
+  <body>
+    <div id="main">
+      
+      <h1 id="title">Jimi Hendrix</h1>
+      <div id="img-div">
+        <div class="column">
+            <img src="images/jimihendrixwoodstock.jpg" alt="Jimi Hendrix at Woodstock" id="image">
+            <img src="images/jimisinging.jpg" alt="Jimi Hendrix at Woodstock singing" id="image">
+            <img src="images/jimidrawing.jpeg" alt="Jimi Hendrix at Woodstock, artists representation" id="image">
+            <p id="img-caption">
+              <em>Hendrix rocking on stage at Woodstock around 1968</em>
+            </p>
+          </div>
+
+        
+      </div>
+      <div id="tribute-info">
+        <center>
+        <p>Well, I stand up next to a mountain</p>
+
+        <p>And I chop it down with the edge of my hand</p>
+
+        <p>Well, I stand up next to a mountain</p>
+
+        <p>Chop it down with the edge of my hand</p>
+
+        <p>Well, I pick up all the pieces and make an island</p>
+
+        <p>Might even raise just a little sand</p>
+
+        <p>'Cause I'm a voodoo child</p>
+
+        <p>Lord knows I'm a voodoo child</p>
+
+        <p>I didn't mean to take you up all your sweet time</p>
+
+        <p>I'll give it right back to you one of these days</p>
+
+        <p>I said, I didn't mean to take you up all your sweet time</p>
+
+        <p>I'll give it right back to you one of these days</p>
+
+        <p>And if I don't meet you no more in this world</p>
+
+        <p>Then I'll, I'll meet you in the next one</p>
+
+        <p>And don't be late, don't be late</p>
+
+        <p>'Cause I'm a voodoo child</p>
+
+        <p>Lord knows I'm a voodoo child</p>
+
+        <p>I'm a voodoo child</p>
+
+        </center>
+      </div>
+        <a href="https://en.wikipedia.org/wiki/Woodstock_(Jimi_Hendrix_album)" target="_blank">
+          Learn more about the Woodstock Jimi Hendrix album.
+        </a>
+        
+    </div>
+  </body>
+</html>
