@@ -11,6 +11,22 @@
         color: var(--color-white);
         margin: 0;
       }
+   
+            h1 {
+        font-weight: 400;
+        line-height: 1.2;
+      }
+
+      p {
+        font-size: 1.125rem;
+      }
+
+      h1,
+      p {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+
       input,
       button,
       select,
@@ -113,7 +129,13 @@
           max-width: 100%;
         }
       }  
-
+      .text-center {
+        text-align: center;
+        margin-bottom: 0.5em;
+      }
+      #title {
+        margin-top: 0.5em;
+      }
 
 
 
@@ -124,8 +146,7 @@
    </head>
   <body>
     <div id="main">
-      
-      <h1 id="title">Jimi Hendrix</h1>
+      <h1 id="title" class="text-center">Jimi Hendrix at Woodstock</h1>
       <div id="img-div">
         <div class="column">
             <img src="images/jimihendrixwoodstock.jpg" alt="Jimi Hendrix at Woodstock" id="image">
