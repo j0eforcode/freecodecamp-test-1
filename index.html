@@ -1,6 +1,90 @@
 <html>
   <head>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=Open+Sans&display=swap');
+      body {
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'New Rocker', cursive;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.4;
+        color: var(--color-white);
+        margin: 0;
+      }
+      input,
+      button,
+      select,
+      textarea {
+        margin: 5px;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+      button {
+        border: 2px solid black;
+        color: red;
+      }
+      form {
+  background: var(--color-darkblue-alpha);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.25rem;
+}
+
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+  }
+}
+
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.5rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--color-green);
+  color: red;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
       #img-div {
         display: flex;
         align-items: center;
@@ -29,6 +113,11 @@
           max-width: 100%;
         }
       }  
+
+
+
+
+
 
     </style>
 
@@ -88,6 +177,119 @@
         <p>I'm a voodoo child</p>
 
         </center>
+      </div>
+      <div>
+        <p id="description">To join the Jimi Hendrix email list please fill out the form below.</p>
+        <form id="survey-form">
+          <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+              <input 
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                placeholder="name goes here :)"
+                required
+                />
+          </div>
+          <div class="form-group">
+            <label id="email-label" for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control"
+                placeholder="Enter ur email ya dufus"
+                required
+              /> 
+          </div>
+          <div class="form-group">
+            <label id="number-label" for="number">Age</label>
+              <input
+                type="number"
+                name="age"
+                id="number"
+                min="18"
+                max="112"
+                class="form-control"
+                placeholder="You must be at least 18 years of age for our emails."
+                />
+          </div>
+          <div class="form-group">
+            <p>How did you hear about the official Jimi Hendrix Woodstock site?</p>
+            <select id="dropdown" name="role" class="form-control" required>
+              <option disabled selected value>Select an Option</option>
+              <option value="google">Google</option>
+              <option value="burning-man">That one crazy guy at Burning Man</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <p>What do you think of this website?</p>
+              <label>
+                <input 
+                name="opinion"
+                value="good"
+                type="radio"
+                class="input-radio"
+                checked
+                />Good</label>
+              <label>
+                <input 
+                name="opinion"
+                value="bad"
+                type="radio"
+                class="input-radio"
+                />Bad</label>
+              <label>
+                <input 
+                name="opinion"
+                value="okay"
+                type="radio"
+                class="input-radio"
+                />It's okay.</label>
+          </div>
+          <div class="form-group">
+            <p>What do think could be improved?<span class="clue"> (check all that apply)</span>
+            </p>
+            <label>
+              <input
+                name="prefer"
+                value="needs-bg"
+                type="checkbox"
+                class="input-checkbox"
+                />It needs work, maybe a background.</label>
+            <label>
+              <input
+                name="prefer"
+                value="music"
+                type="checkbox"
+                class="input-checkbox"
+                />Gimme some music</label>
+            <label>
+              <input
+                name="prefer"
+                value="videos"
+                type="checkbox"
+                class="input-checkbox"
+                />Gimme some videos</label>
+          </div>
+          <div class="form-group">
+            <p>Comments & Suggestions:</p>
+              <textarea
+                id="comments"
+                class="input-textarea"
+                name="comment"
+                placeholder="Tell me how you really feel..."></textarea>
+          </div>
+            <div class="form-group">
+              <button
+                type="submit"
+                id="submit"
+                class="submit-button">Sign me up!</button>
+
+            </div>
+          </form>
       </div>
         <a href="https://en.wikipedia.org/wiki/Woodstock_(Jimi_Hendrix_album)" target="_blank">
           Learn more about the Woodstock Jimi Hendrix album.
